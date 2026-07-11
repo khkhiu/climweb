@@ -22,6 +22,31 @@ A fresh ClimWeb checkout has no pages beyond Wagtail's generic "Welcome to your 
 2. **A Web Stories listing page must exist and be published as a child of Home page.**
 Without one, the Web Stories dashboard (`/cms-admin/web-stories-list/`) returns a server error, and the editor may not function correctly. To create it: select *Pages*, open *Home*, select *Add child page*, select *Web Story List Page*, give it a title (e.g. "Web Stories"), select *Publish*. Only one instance of this page is needed per site.
 
+## Creating a story
+
+1. Go to **Web Stories** in the using the Naviagation menu on the left side of the screen.
+> **Note 1:** The navigation menu can be expanded or collapsed using the arrow button(|-> OR <-| respectively).
+![Web Stories page with collapsed menu](../_static/images/webstories/02_landing_page_collapsed_menu.png "Web Stories page with collapsed menu")
+
+2. Click **Create New Story**.
+> **Note 2:** On smaller screens, the navigation menu may shrink into a menu button (three horizontal lines inside a black square) located in the top-left corner of the screen. Tap or click this button to open the menu.
+
+> **Note 3:** Like **Note 2**, the **Create New Story** button may be shrunk into a menu button (three horizontal lines with a white background, next to the "Dashboard" title). Tap or click this button to open the menu.
+
+<div style="display: flex; gap: 10px; align-items: flex-start;">
+  <img src="../_static/images/webstories/03_landing_page_small_screen_collapsed_menu.png" alt="Small screen with the navigation menu collapsed" title="Collapsed Menu View" style="width: 32%;" />
+  <img src="../_static/images/webstories/04_landing_page_small_screen_expanded_menu.png" alt="Small screen with the navigation menu expanded" title="Expanded Menu View" style="width: 32%;" />
+  <img src="../_static/images/webstories/05_landing_page_small_screen_expanded_menu_webstories.png" alt="Small screen showing the expanded Web Stories specific menu" title="Web Stories Menu View" style="width: 32%;" />
+</div>
+
+3. Fill in the story title, then save as a draft:
+![Web Stories editing canvas](../_static/images/webstories/06_webstories_editing_canvas.png "Web Stories editing canvas")
+
+> **Note 4:** A story can be published with a blank title, ClimWeb will default the title to "Untitled." in this scenario.
+
+4. Save the story by selecting *Save draft* in the bottom left of the screen. The other fields will be covered later in this guide (see Media and text overlays and Publishing).
+
+> **Tip:** You can create the story with just a title first, then build out content. You do not need to have every field filled in before adding content.
 
 ## Troubleshooting
 
