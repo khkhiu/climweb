@@ -25,13 +25,16 @@ Without one, the Web Stories dashboard (`/cms-admin/web-stories-list/`) returns 
 ## Creating a story
 
 1. Go to **Web Stories** in the using the Naviagation menu on the left side of the screen.
-> **Note 1:** The navigation menu can be expanded or collapsed using the arrow button(|-> OR <-| respectively).
+
+> **Note 1 - Navigation menu toggle:** The navigation menu can be expanded or collapsed using the arrow button(|-> OR <-| respectively).
+
 ![Web Stories page with collapsed menu](../_static/images/webstories/02_landing_page_collapsed_menu.png "Web Stories page with collapsed menu")
 
 2. Click **Create New Story**.
-> **Note 2:** On smaller screens, the navigation menu may shrink into a menu button (three horizontal lines inside a black square) located in the top-left corner of the screen. Tap or click this button to open the menu.
 
-> **Note 3:** Like **Note 2**, the **Create New Story** button may be shrunk into a menu button (three horizontal lines with a white background, next to the "Dashboard" title). Tap or click this button to open the menu.
+> **Note 2 - Mobile navigation menu behavior:** On smaller screens, the navigation menu may shrink into a menu button (three horizontal lines inside a black square) located in the top-left corner of the screen. Tap or click this button to open the menu.
+
+> **Note 3 - Dashboard menu collapsing:** Like **Note 2**, the **Create New Story** button may be shrunk into a menu button (three horizontal lines with a white background, next to the "Dashboard" title). Tap or click this button to open the menu.
 
 <div style="display: flex; gap: 10px; align-items: flex-start;">
   <img src="../_static/images/webstories/03_landing_page_small_screen_collapsed_menu.png" alt="Small screen with the navigation menu collapsed" title="Collapsed Menu View" style="width: 32%;" />
@@ -42,11 +45,36 @@ Without one, the Web Stories dashboard (`/cms-admin/web-stories-list/`) returns 
 3. Fill in the story title, then save as a draft:
 ![Web Stories editing canvas](../_static/images/webstories/06_webstories_editing_canvas.png "Web Stories editing canvas")
 
-> **Note 4:** A story can be published with a blank title, ClimWeb will default the title to "Untitled." in this scenario.
+> **Note 4 - Missing title default** A story can be published with a blank title, ClimWeb will default the title to "Untitled." in this scenario.
 
 4. Save the story by selecting *Save draft* in the bottom left of the screen. The other fields will be covered later in this guide (see Media and text overlays and Publishing).
 
-> **Tip:** You can create the story with just a title first, then build out content. You do not need to have every field filled in before adding content.
+> **Note 5 - Content drafting workflow:** You can create the story with just a title first, then build out content. You do not need to have every field filled in before adding content.
+
+## Adding slides
+
+Each story is made up of a sequence of slides. ClimWeb's slide editor supports a few different content types:
+
+- **Image slide**: An image of PNG, JPG, AVIF, GIF, JPEG, or WEBP format, with a maximum filesize of 10.0 MB.
+
+- **Video slide**: A video of AVI, H264, M4V, MKV, MOV, MP4, MPEG, MPG, OGV, or WEBM format. There is no video-specific filesize limit enforced by the editor. However the practical ceiling is the server's general upload limit of 25.0 MB by default. and may be lower if a reverse proxy in front of ClimWeb imposes its own limit.
+
+- **Third-party media**: In addition to user uploaded images and video, the Insert panel includes a third-party stock media tab (photos, video, and GIFs from Unsplash, Coverr, and Tenor) powered by Google's Media 3P proxy API. This works out of the box with no ClimWeb-side configuration required as the integration ships with the editor itself. Do note that all third-party assets are subject to the intellectual property and licensing policies of their respective platforms. Users are responsible for ensuring their use complies with these terms.
+
+- **Shapes, stickers, and pre-built page templates**: These features are available from the Insert panel and when creating a new story. They are a fixed library built into the editor; they cannot be extended or supplemented with additional content. The search field matches only whole words within an item's name. For example, searching "fresh and bright" returns an item named "Fresh and Bright Cover", but searching "cover" alone does not. Category terms such as "Cover", "Section", or "Quote" are not matched by the search field; use the filter buttons below the search bar to filter by these instead.
+
+To add a slide:
+
+1. Open your story and click **+ New Page**.
+3. Build out the slide's content (see [Media and text overlays](#media-and-text-overlays) below).
+3. Repeat until you have all the slides you need.
+
+![Web Stories editing canvas with additional pages](../_static/images/webstories/07_webstories_editing_canvas_additional_pages.png "Web Stories editing canvas with additional pages")
+
+> **Note 6 - Google distribution guidelines:** Google’s Web Stories format recommends a minimum of 4 pages to be eligible for indexing, organic Search, and appearance on the Google Discover feed. Stories shorter than 4 pages are deemed incomplete by Google's guidelines and are typically suppressed from distribution ([Source: Google Search Central](https://developers.google.com/search/docs/appearance/web-stories-creation-best-practices)).
+
+> **Note 7 - ClimWeb editor enforcement:**ClimWeb’s Web Story editor does not enforce this minimum page requirement at either the backend (Django) or frontend levels. While the underlying Web Stories editor contains a built-in pre-publish checklist helper, the editor does not block or pop up warnings during the publishing workflow if a story is under 4 pages or contains blank slides. Authors can successfully save and publish stories with only 2–3 slides, but should manually ensure they meet the 4-page minimum to guarantee search engine visibility.
+
 
 ## Troubleshooting
 
