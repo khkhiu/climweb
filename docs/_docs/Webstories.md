@@ -4,9 +4,9 @@
 
 Web Stories are short, full-screen videos(similar to those found on various social media platforms) built on Google's open Web Stories standard. They are designed for quick, mobile-first storytelling using images, videos and short texts that readers tap through one at a time.
 
-For National Meteorological and Hydrological Service(NMHS), Web Stories are a good fit for content that benefits from a qucik visual format rather than a a long article. For example, a seasonal outlook explainer or public awareness campaign.
+For National Meteorological and Hydrological Service(NMHS), Web Stories are a good fit for content that benefits from a quick visual format rather than a a long article. For example, a seasonal outlook explainer or public awareness campaign.
 
-In ClimWeb, Web Stories are managed from the **Web Stories** section. Published stories are automatically included in the site's sitemap, hencing making them easier to search for.
+In ClimWeb, Web Stories are managed from the **Web Stories** section. Published stories are automatically included in the site's sitemap, hence making them easier to search for.
 
 This guide walks through the full workflow: Creating a story, adding and ordering slides, adding media and text overlays, previewing, publishing and managing stories after they are published.
 
@@ -24,7 +24,7 @@ Without one, the Web Stories dashboard (`/cms-admin/web-stories-list/`) returns 
 
 ## Creating a story
 
-1. Go to **Web Stories** in the using the Naviagation menu on the left side of the screen.
+1. Go to **Web Stories** in the using the Navigation menu on the left side of the screen.
 
 > **Note 1 - Navigation menu toggle:** The navigation menu can be expanded or collapsed using the arrow button(|-> OR <-| respectively).
 
@@ -59,7 +59,7 @@ Each story is made up of a sequence of slides. ClimWeb's slide editor supports a
 
 - **Video slide**: A video of AVI, H264, M4V, MKV, MOV, MP4, MPEG, MPG, OGV, or WEBM format. There is no video-specific filesize limit enforced by the editor. However the practical ceiling is the server's general upload limit of 25.0 MB by default. and may be lower if a reverse proxy in front of ClimWeb imposes its own limit.
 
-- **Third-party media**: In addition to user uploaded images and video, the Insert panel includes a third-party stock media tab (photos, video, and GIFs from Unsplash, Coverr, and Tenor) powered by Google's Media 3P proxy API. This works out of the box with no ClimWeb-side configuration required as the integration ships with the editor itself. Do note that all third-party assets are subject to the intellectual property and licensing policies of their respective platforms. Users are responsible for ensuring their use complies with these terms.
+- **Third-party media**: In addition to user uploaded images and video, the Insert panel includes a third-party stock media tab (photos, video, and GIFs from Unsplash, Cover, and Tenor) powered by Google's Media 3P proxy API. This works out of the box with no ClimWeb-side configuration required as the integration ships with the editor itself. Do note that all third-party assets are subject to the intellectual property and licensing policies of their respective platforms. Users are responsible for ensuring their use complies with these terms.
 
 - **Shapes, stickers, and pre-built page templates**: These features are available from the Insert panel and when creating a new story. They are a fixed library built into the editor; they cannot be extended or supplemented with additional content. The search field matches only whole words within an item's name. For example, searching "fresh and bright" returns an item named "Fresh and Bright Cover", but searching "cover" alone does not. Category terms such as "Cover", "Section", or "Quote" are not matched by the search field; use the filter buttons below the search bar to filter by these instead.
 
@@ -75,6 +75,32 @@ To add a slide:
 
 > **Note 7 - ClimWeb editor enforcement:**ClimWeb’s Web Story editor does not enforce this minimum page requirement at either the backend (Django) or frontend levels. While the underlying Web Stories editor contains a built-in pre-publish checklist helper, the editor does not block or pop up warnings during the publishing workflow if a story is under 4 pages or contains blank slides. Authors can successfully save and publish stories with only 2–3 slides, but should manually ensure they meet the 4-page minimum to guarantee search engine visibility.
 
+## Media and text overlays
+
+### Adding images
+
+1. On a slide, open the **Insert** tab in the left panel.
+2. Click the **upload icon** (cloud with an up arrow) in the row of small icons below the search bar, it sits between the **link** icon and the **video** icon.
+3. In the dialog that opens, use the **Upload** tab to add a new file, or switch to the **Search** tab to choose an existing image from ClimWeb's media library.
+4. Supported formats are PNG, JPG, AVIF, GIF, JPEG, and WEBP, with a maximum file size of 10.0 MB per image.
+
+![Insert panel with the upload icon highlighted](../_static/images/webstories/09_media_upload_dialog.png "Insert panel, upload icon")
+
+![Upload tab of the image chooser](../_static/images/webstories/10_image_upload_tab.png "Image upload, Upload tab")
+
+![Search tab of the image chooser, showing existing library images available to insert](../_static/images/webstories/11_image_search_tab.png "Image chooser, Search tab")
+
+![Slide with an image inserted, showing resize handles and the transform toolbar](../_static/images/webstories/12_slide_with_image.png "Slide with image, no text yet")
+
+> **Note 8 - Entering tags when uploading images:** Press "Enter" after typing in individual tags to enter them. Multi-word tags with spaces will automatically be enclosed in double quotes(" ") by ClimWeb.
+
+> **Important Note - Known Limitation:** The image selection list in the side panel can only show the first 20 images uploaded to the website. If the site has more than 20 images, any new images you upload will **not** appear in this browseable side list.
+> **What this means for you:**
+> * **New uploads still work:** You can safely click the upload button to add new images. Your files are saved properly, even if they disappear from the side list right after.
+> * **Existing stories are safe:** Any images already placed inside your Web Story slides will display and publish perfectly.
+> * **Where to find all images:** If you need to see, edit, or manage your full library of pictures, use the main website dashboard under the **Images** section instead of the Web Story editor's side panel.
+> 
+> This is a known display issue with the side list itself, not a sign that your upload failed. [Issue link: https://github.com/erick-otenyo/wagtail-webstories-editor/issues/2].
 
 ## Troubleshooting
 
