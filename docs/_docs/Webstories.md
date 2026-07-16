@@ -83,6 +83,7 @@ To add a slide:
 2. Click the **upload icon** (cloud with an up arrow) in the row of small icons below the search bar, it sits between the **link** icon and the **video** icon.
 3. In the dialog that opens, use the **Upload** tab to add a new file, or switch to the **Search** tab to choose an existing image from ClimWeb's media library.
 4. Supported formats are PNG, JPG, AVIF, GIF, JPEG, and WEBP, with a maximum file size of 10.0 MB per image.
+5. Adjust image on canvas as desired.
 
 ![Insert panel with the upload icon highlighted](../_static/images/webstories/09_media_upload_dialog.png "Insert panel, upload icon")
 
@@ -91,6 +92,8 @@ To add a slide:
 ![Search tab of the image chooser, showing existing library images available to insert](../_static/images/webstories/11_image_search_tab.png "Image chooser, Search tab")
 
 ![Slide with an image inserted, showing resize handles and the transform toolbar](../_static/images/webstories/12_slide_with_image.png "Slide with image, no text yet")
+
+![Slide with an image inserted, after user adjustments](../_static/images/webstories/13_slide_with_image_adjusted.png "Slide with image after adjustments")
 
 > **Note 8 - Entering tags when uploading images:** Press "Enter" after typing in individual tags to enter them. Multi-word tags with spaces will automatically be enclosed in double quotes(" ") by ClimWeb.
 
@@ -101,6 +104,20 @@ To add a slide:
 > * **Where to find all images:** If you need to see, edit, or manage your full library of pictures, use the main website dashboard under the **Images** section instead of the Web Story editor's side panel.
 > 
 > This is a known display issue with the side list itself, not a sign that your upload failed. [Issue link: https://github.com/erick-otenyo/wagtail-webstories-editor/issues/2].
+
+### Adding text overlay
+
+1. With the slide open, click on the desired text types to add them to the canvas (or drag desired text types to add them to the canvas).
+2. Use the text toolbar to adjust font, size, colour, alignment, and position on the slide.
+3. Drag the text box to position it over the media so it stays readable (avoid busy parts of the image).
+
+![Slide with text types added, before text has been updated](../_static/images/webstories/14_slide_image_and_text.png "Slide with text types")
+
+![Slide with text that has been completed](../_static/images/webstories/15_slide_image_and_text_complete.png "Slide with text completed")
+
+> **Note 9 – Text Manipulation and Scaling:** To reposition a text element on the canvas, click and drag within the text box boundaries. You must ensure the element is not in active text-editing (typing) mode. If the typing cursor is active, dragging will select text rather than move the container. To move the element, click outside the box to deselect it, then click once to select and drag it. Additionally, dragging the corner handles of the bounding box will dynamically scale the font size proportionally. To adjust the box width or wrap text without changing the font size, use the manual width and height inputs or the dedicated font size selector in the right-hand styling properties panel.
+
+
 
 ## Troubleshooting
 
